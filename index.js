@@ -8,5 +8,6 @@ require('./startup/db')()
 require('./startup/validation')()
 // routes & middleware
 require('./startup/routes')(app)
+require('./startup/prod')(app)
 // port & listen
 app.listen(port = (process.env.PORT || 3000), () => console.log(`Listening on port ${port}...`))
